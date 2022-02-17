@@ -32,6 +32,9 @@ while True:
         pts= np.array ([barcode.polygon], np.int32)
         pts = pts.reshape ((-1,1,2))
         cv2.polylines(img, [pts], True, (65, 105, 255),5 )
+        cap.release()
+        cv2.destroyAllWindows()
+
     #result
  
     cv2.imshow('Scan Qrcode here', img)    
@@ -40,4 +43,3 @@ while True:
 
     #save as text file
 sys.stdout.close()
-
